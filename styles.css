@@ -1,0 +1,276 @@
+/* Global Values Start */
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Rubik', sans-serif;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+body {
+    background: #333333;
+    background: linear-gradient(to left, #dd1818, #333333);    
+}
+
+.section-title {
+    text-align: center;
+    color: white;
+    margin: 50px 0;
+}
+
+h1 {
+    color: white;
+}
+
+/* Global Values End */
+
+/* Nav Start */
+
+nav {
+    padding: 25px 0;
+    position: relative;
+    background-color: #171615;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 20px;
+}
+
+nav .links ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+nav .links ul li a {
+    font-size: 17px;
+}
+
+nav .links ul li a:hover {
+    color: #ccc;
+}
+
+nav .icon {
+    display: none;
+}
+
+@media screen and (max-width: 426px) {
+
+    nav .icon {
+        display: block;
+    }
+
+    nav .links {
+        opacity: 0;
+    }
+
+    nav .links ul {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: #010100ce;
+        gap: 0;
+        z-index: 3;
+    }
+
+    nav .links ul li {
+        border: 1px solid black;
+        padding: 10px;
+    }
+
+    nav .icon i {
+        color: white;
+        font-size: 20px;
+    }
+
+}
+
+/* Nav End */
+
+/* Home Start */
+
+.home-section {
+    padding: 0 0 50px 0;
+}
+
+.home-section .container {
+    width: 100%;
+    position: relative;
+}
+
+.home-section .container .image {
+    width: 100%;
+}
+
+.home-section .container .image img {
+    width: 100%;
+    position: relative;
+    z-index: 0;
+}
+
+.home-section .container .image::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.home-section .container .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+}
+
+.home-section .container .text h1 {
+    font-size: 30px;
+    margin: 25px 0;
+}
+
+.home-section .container .text p {
+    font-size: 20px;
+}
+
+@media screen and (max-width: 426px) {
+    
+    .home-section .container .text h1 {
+        font-size: 23px;
+        width: 100%;
+    }
+
+    .home-section .container .text p {
+        font-size: 15px;
+        width: 90%;
+        text-align: center;
+    }
+
+}
+
+/* Home End */
+
+/* Main Start */
+
+.main-section {
+    padding: 50px 0;
+}
+
+.main-section .container {
+    width: 80%;
+    margin: auto;
+}
+
+.main-section .container .cards {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.main-section .container .cards .card {
+    width: 40%;
+    background-color: #171615;
+    color: white;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.main-section .container .cards .card:hover {
+    transform: translateY(-10%);
+}
+
+.main-section .container .cards .card .title h3 {
+    margin: 50px 0;
+}
+
+.main-section .container .cards .card .image {
+    width: 100%;
+}
+
+.main-section .container .cards .card .image img {
+    width: 100%;
+}
+
+@media screen and (max-width: 426px) {
+
+    .main-section .container .cards {
+        flex-direction: column;
+    }
+
+    .main-section .container .cards .card {
+        width: 100%;
+    }
+
+}
+
+/* Main End */
+
+/* Contact Start */
+
+.contact-section {
+    padding: 50px 0;
+}
+
+.contact-section .container form {
+    width: 50%;
+    margin: auto;
+}
+
+.contact-section .container form input,
+.contact-section .container form textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.contact-section .container form .btn {
+    background-color: #171615;
+    color: white;
+    border: 0;
+    transition: 0.5s;
+}
+
+.contact-section .container form .btn:hover {
+    background-color: #333333;
+}
+
+@media screen and (max-width: 426px) {
+
+    .contact-section .container form {
+        width: 100%;
+    }
+
+}
+
+/* Contact End */
